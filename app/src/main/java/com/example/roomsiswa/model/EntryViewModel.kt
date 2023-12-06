@@ -15,7 +15,14 @@ class EntryViewModel (private val repositoriSiswa: ReporisitoriSiswa): ViewModel
     var uiStateSiswa by mutableStateOf(UIStateSiswa())
         private set
 
-
+    /**
+     * Function Untuk valiasi input
+     */
+    private fun validasiInput (uiState:DetailSiswa = uiStateSiswa.detailSiswa):Boolean{
+        return  with(uiState){
+            nama.isNotBlank()&&alamat.isNotBlank()&&telepon.isNotBlank()
+        }
+    }
     /**
      * Mewakili Status Untuk Siswa
      */
