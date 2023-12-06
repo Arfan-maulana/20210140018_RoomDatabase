@@ -2,8 +2,6 @@ package com.example.roomsiswa.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-
-class Siswa {
     @Entity(tableName = "tblSiswa")
     data class Siswa(
         @PrimaryKey(autoGenerate = true)
@@ -12,4 +10,3 @@ class Siswa {
         val alamat : String,
         val telpon : String
     )
-}
