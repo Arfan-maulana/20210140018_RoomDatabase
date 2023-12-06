@@ -17,4 +17,5 @@ object DestinasiEntry: DestinasiNavigasi{
 fun EntrySiswaScreen(){
     val coroutineScope = rememberCoroutineScope()
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+
 }
