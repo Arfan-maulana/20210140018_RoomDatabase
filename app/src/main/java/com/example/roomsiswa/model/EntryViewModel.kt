@@ -30,6 +30,12 @@ class EntryViewModel (private val repositoriSiswa: ReporisitoriSiswa): ViewModel
             UIStateSiswa(detailSiswa = detailSiswa, isEntryValid = validasiInput(detailSiswa))
     }
 
+    suspend fun saveSiswa() {
+        if (validasiInput()) {
+            repositoriSiswa.insertSiswa(uiStateSiswa.detailSiswa.toSiswa())
+        }
+    }
+}
 
     /**
      * Mewakili Status Untuk Siswa
@@ -64,4 +70,3 @@ class EntryViewModel (private val repositoriSiswa: ReporisitoriSiswa): ViewModel
         alamat = alamat,
         telpon = telpon
     )
-}
